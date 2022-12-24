@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [
     RubyPlugin(),
     FullReload(["config/routes.rb", "app/views/**/*"]),
-    svelte(), // add this line
+    svelte(),
   ],
 });
