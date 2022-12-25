@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="455a3f49-8de7-4976-968e-2093ba7490cf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/frontend/pages/home/index.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/entrypoints/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/entrypoints/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,8 @@
       <list>
         <option value="Client" />
         <option value="TypeScript File" />
+        <option value="Ruby File" />
+        <option value="index.svelte" />
       </list>
     </option>
   </component>
