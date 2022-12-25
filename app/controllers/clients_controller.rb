@@ -4,6 +4,8 @@ class ClientsController < ApplicationController
   # GET /clients
   def index
     @clients = Client.all
+
+    render inertia: 'clients/index'
   end
 
   # GET /clients/1

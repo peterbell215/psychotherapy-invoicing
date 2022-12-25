@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="455a3f49-8de7-4976-968e-2093ba7490cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/frontend/components/Client.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/entrypoints/clients.ts" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/frontend/pages/clients/index.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/clients_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/clients_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +233,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/invoicing@Rails_console__invoicing.rcov" NAME="Rails console: invoicing Coverage Results" MODIFIED="1671832190878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
-    <SUITE FILE_PATH="coverage/invoicing@invoicing.rcov" NAME="invoicing Coverage Results" MODIFIED="1671948991846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
+    <SUITE FILE_PATH="coverage/invoicing@invoicing.rcov" NAME="invoicing Coverage Results" MODIFIED="1671950356193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
   </component>
 </project>
