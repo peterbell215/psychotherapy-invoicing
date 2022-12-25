@@ -5,7 +5,10 @@ class ClientsController < ApplicationController
   def index
     @clients = Client.all
 
-    render inertia: 'clients/index'
+    respond_to do |format|
+      format.html { render inertia: 'clients/index' }
+      format.json { render :index }
+    end
   end
 
   # GET /clients/1
