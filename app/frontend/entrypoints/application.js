@@ -8,6 +8,13 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 
 import axios from 'axios'
 
+// Import our custom CSS
+import './application.scss'
+
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
+
+
 import { createInertiaApp } from '@inertiajs/inertia-svelte'
 import { InertiaProgress } from '@inertiajs/progress'
 
