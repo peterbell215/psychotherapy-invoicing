@@ -1,13 +1,7 @@
-interface ClientData {
-    id: number;
-    name: string;
-    address1: string;
-    address2: string;
-    town: string;
-    postcode: string;
-}
+import {ClientData} from "./ClientData";
 
-export class Client implements ClientData{
+// @ts-ignore
+export class Client extends ClientData {
     static async fetchClients() : Promise<Array<Client>> {
         const res = await fetch(`/clients.json`);
         const data = await res.json();
