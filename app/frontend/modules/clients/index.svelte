@@ -1,11 +1,12 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { Client } from "./Client.ts";
+    import { Client } from "./Client";
+    import { fetchIndex } from "../FetchData";
 
     let clients = [];
 
     onMount( async () => {
-        clients = await Client.fetchClients()
+        clients = await fetchIndex(Client);
     } );
 </script>
 
