@@ -1,11 +1,13 @@
-export class Client {
+interface ClientData {
     id: number;
     name: string;
     address1: string;
     address2: string;
     town: string;
     postcode: string;
+}
 
+export class Client implements ClientData{
     static async fetchClients() : Promise<Array<Client>> {
         const res = await fetch(`/clients.json`);
         const data = await res.json();
