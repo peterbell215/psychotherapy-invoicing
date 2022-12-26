@@ -1,13 +1,12 @@
-<script>
-    import { onMount } from 'svelte'
+<script lang="ts">
+    import { onMount } from 'svelte';
+    import { Client } from "./Client.ts";
 
-    let clients = []
+    let clients = [];
 
-    onMount(() => {
-        fetch('/clients.json')
-            .then(response => response.json())
-            .then(result => clients = result)
-    })
+    onMount( async () => {
+        clients = await Client.fetchClients()
+    } );
 </script>
 
 <h1>Clients</h1>
@@ -23,7 +22,7 @@
         {#each clients as client (client.id)}
             <tr>
                 <td>{client.name}</td>
-                <td>{client.address1}</td>
+                <td>{client.fullAddress()}</td>
             </tr>
         {:else}
             <tr>Loading...</tr>
