@@ -8,6 +8,8 @@ gem "rails", "~> 7.0.4"
 
 gem 'jbuilder', '~> 2.11'
 
+gem 'money-rails', '~>1.12'
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
