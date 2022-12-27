@@ -1,0 +1,5 @@
+import { <%= class_data_name %> } from \"./<%= class_data_name %>\";
+
+export class <%= class_name %> extends <%= class_data_name %> {
+    // ToDo: add your code here.
+}

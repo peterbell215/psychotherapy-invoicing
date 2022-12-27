@@ -1,0 +1,21 @@
+Description:
+    Creates the files necessary to link the Svelte frontend with the Rails backend so that the frontend
+    can receive all fields defined in the backend.
+
+Example:
+    bin/rails generate svelte_model Book
+
+    This will create:
+        /app
+            /frontend
+                /modules
+                    /Book
+                        Book.ts <- class into which to put any specific Svelte-side methods to fornmat, validate
+                                   or otherwise manipulate the class.  Rerunning the generator will not touch this
+                                   file.
+                        BookData.ts <- class containing definition of all the data fields in the Rails backend database.
+                                   This file is regenerated each time, so that any changes to the database/model
+                                   structure in Rails will be reflected in the files.
+                    FetchData.ts <- contains the code that does the heavy lifting of fetching the data from the backend.
+                                   Only created if the file does not exist.
+
