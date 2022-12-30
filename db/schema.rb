@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_27_202358) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_29_061154) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,8 +28,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_27_202358) do
     t.bigint "client_id", null: false
     t.date "from"
     t.date "to"
-    t.integer "charge_rate_pence", default: 0, null: false
-    t.string "charge_rate_currency", default: "GBP", null: false
+    t.integer "hourly_charge_rate_pence", default: 0, null: false
+    t.string "hourly_charge_rate_currency", default: "GBP", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_session_charges_on_client_id"
@@ -39,8 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_27_202358) do
     t.bigint "client_id", null: false
     t.datetime "start", null: false
     t.integer "duration", null: false
-    t.integer "charge_pence", default: 0, null: false
-    t.string "charge_currency", default: "GBP", null: false
+    t.integer "hourly_charge_pence", default: 0, null: false
+    t.string "hourly_charge_currency", default: "GBP", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_sessions_on_client_id"
