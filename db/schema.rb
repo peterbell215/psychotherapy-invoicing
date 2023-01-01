@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_29_061154) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_01_041004) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,9 +26,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_29_061154) do
 
   create_table "session_charges", force: :cascade do |t|
     t.bigint "client_id", null: false
-    t.date "from"
+    t.date "from", null: false
     t.date "to"
-    t.integer "hourly_charge_rate_pence", default: 0, null: false
+    t.integer "hourly_charge_rate_pence", default: 6000, null: false
     t.string "hourly_charge_rate_currency", default: "GBP", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
