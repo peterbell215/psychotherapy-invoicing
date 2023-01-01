@@ -18,7 +18,7 @@ AllCops:
     - 'db/**/*'
     - 'config/**/*'
     - 'script/**/*'
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.1
 
 Style/RedundantSelf:
   Enabled: false
@@ -42,7 +42,7 @@ RSpec/MultipleExpectations:
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context', 'feature', 'define', 'shared_examples', 'factory']
 
-# I like to use the description 'scenario in feature specs.
+# I like to use the description 'scenario' in feature specs.
 RSpec/Capybara:
    Exclude:
     - spec/features/**/*_spec.rb
