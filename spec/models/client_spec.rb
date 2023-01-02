@@ -28,4 +28,13 @@ describe 'Client' do
       end
     end
   end
+
+  describe 'ensure no overlaps on session_charges' do
+    context 'when non-overlapping session_charges exist' do
+      subject { FactoryBot.create :client_with_session_charges }
+      it 'passes validation' do
+        expect(subject.valid?).to be_truthy
+      end
+    end
+  end
 end
