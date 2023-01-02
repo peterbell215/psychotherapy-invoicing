@@ -21,7 +21,7 @@ describe 'Client' do
 
   describe '#default_session_charge' do
     context 'when a new record is created with a nil value for hourly_charge' do
-      subject { FactoryBot.create :client}
+      subject { FactoryBot.create :client }
 
       it 'autofills the session_charge.' do
         expect(subject.default_session_charge).to eq Money.new(6000)
@@ -31,9 +31,19 @@ describe 'Client' do
 
   describe 'ensure no overlaps on session_charges' do
     context 'when non-overlapping session_charges exist' do
-      subject { FactoryBot.create :client_with_session_charges }
+      subject { FactoryBot.build :client_with_session_charges }
+
       it 'passes validation' do
-        expect(subject.valid?).to be_truthy
+        expect(subject).to be_valid
+      end
+    end
+
+    context 'when overlapping session_charges exist' do
+      subject { FactoryBot.build :client_with_session_charges, gap: -5.days }
+
+      it 'fails validation' do
+        expect(subject).not_to be_valid
+        expect(subject.errors[:session_charges].first).to eq "Session charge to 2023-06-01 overlaps with its successor"
       end
     end
   end

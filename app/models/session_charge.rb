@@ -4,13 +4,10 @@ class SessionCharge < ApplicationRecord
   monetize :hourly_charge_rate_pence
 
   # Checks if for the provided client_id any session charge entries' date ranges overlap.
-  # @param [BigInt] client_id
+  # @param [ActiveResult] session_charges
   # @return [SessionCharge|false]
-  def self.overlap?(client_id)
-    SessionCharge.where(client_id: client_id).order(:from).each_with_object(nil) do |current, previous|
-      return current if previous && previous.to >= current.from
-      previous = current
-    end
-    false
+  def self.overlap?(session_charges)
+    overlapping_pair = session_charges.each_cons(2).find { |previous, following| previous.to >= following.from }
+    overlapping_pair&.first
   end
 end

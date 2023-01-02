@@ -13,10 +13,10 @@ FactoryBot.define do
       end
 
       session_charges {
-        3.times.each_with_object([]) do |loop, session_charges|
-          from = session_charges.empty? ? Date.new(2022, 12, 1) : session_charges.last.to + gap
-          to = loop < 2? from + 6.months : nil
-          session_charges.push(association(:session_charge, from: from, to: to))
+        3.times.each_with_object([]) do |loop, session_charges_array|
+          from = session_charges_array.empty? ? Date.new(2022, 12, 1) : session_charges_array.last.to + gap
+          to = loop < 2 ? from + 6.months : nil
+          session_charges_array.push(association(:session_charge, from: from, to: to))
         end
       }
     end

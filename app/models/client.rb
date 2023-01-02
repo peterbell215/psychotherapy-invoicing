@@ -17,8 +17,8 @@ class Client < ApplicationRecord
   end
 
   def session_charges_must_not_overlap
-    overlap_error = SessionCharge.overlap?(self.id)
+    overlap_error = SessionCharge.overlap?(self.session_charges)
 
-    self.errors.add(:session_charges, "Session charge to #{overlap_error.to} overlaps with its successor  ") if overlap_error
+    self.errors.add(:session_charges, "Session charge to #{overlap_error.to} overlaps with its successor") if overlap_error
   end
 end
