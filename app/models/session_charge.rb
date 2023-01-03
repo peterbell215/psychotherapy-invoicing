@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# Describes the standard session charge that is applied to charges within a defined period.  If the `to` field
+# is *nil*, then the charge period is open ended.
 class SessionCharge < ApplicationRecord
   belongs_to :client
 
