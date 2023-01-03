@@ -11,12 +11,12 @@ describe 'Client' do
     end
   end
 
-  describe '#default_session_charge' do
+  describe '#current_rate' do
     context 'when a new record is built with a nil value for hourly_charge' do
       subject(:test_client) { build(:client) }
 
       it 'autofills the session_charge.' do
-        expect(test_client.default_session_charge).to eq Money.new(6000)
+        expect(test_client.current_rate).to eq Money.new(6000)
       end
     end
 
@@ -26,7 +26,7 @@ describe 'Client' do
       before(:context) { create(:client) }
 
       it 'creates a child record session_charge with a default value' do
-        expect(test_client.default_session_charge).to eq Money.new(6000)
+        expect(test_client.current_rate).to eq Money.new(6000)
       end
     end
   end

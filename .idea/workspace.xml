@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="455a3f49-8de7-4976-968e-2093ba7490cf" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/spec/support/factory_bot.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/client.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/client.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/session.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/session.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/session_charge.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/session_charge.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/clients/_client.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/clients/_client.json.jbuilder" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/models/client_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/client_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +98,7 @@
       <command value="rake db:migrate" />
     </option>
   </component>
-  <component name="RunManager" selected="Rake.spec: invoicing">
+  <component name="RunManager" selected="RSpec.client_spec">
     <configuration name="Svelte Model Generator" type="IrbRunConfigurationType" factoryName="IRB console">
       <module name="invoicing" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -409,7 +403,7 @@
       <workItem from="1672296519079" duration="7109000" />
       <workItem from="1672544440690" duration="10927000" />
       <workItem from="1672606038152" duration="9166000" />
-      <workItem from="1672694847015" duration="7749000" />
+      <workItem from="1672694847015" duration="11363000" />
     </task>
     <servers />
   </component>
@@ -456,7 +450,7 @@
     <SUITE FILE_PATH="coverage/invoicing@dev_create_test_data__invoicing.rcov" NAME="dev:create_test_data: invoicing Coverage Results" MODIFIED="1672377382914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
     <SUITE FILE_PATH="coverage/invoicing@db_migrate_redo__invoicing.rcov" NAME="db:migrate:redo: invoicing Coverage Results" MODIFIED="1672172471808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
     <SUITE FILE_PATH="coverage/invoicing@Svelte_Model_Generator.rcov" NAME="Svelte Model Generator Coverage Results" MODIFIED="1672170760464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
-    <SUITE FILE_PATH="coverage/invoicing@client_spec.rcov" NAME="client_spec Coverage Results" MODIFIED="1672729717061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
+    <SUITE FILE_PATH="coverage/invoicing@client_spec.rcov" NAME="client_spec Coverage Results" MODIFIED="1672784608749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
     <SUITE FILE_PATH="coverage/invoicing@invoicing.rcov" NAME="invoicing Coverage Results" MODIFIED="1672057643533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
     <SUITE FILE_PATH="coverage/invoicing@db_migrate__invoicing.rcov" NAME="db:migrate: invoicing Coverage Results" MODIFIED="1672606801799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />
     <SUITE FILE_PATH="coverage/invoicing@spec__invoicing.rcov" NAME="spec: invoicing Coverage Results" MODIFIED="1672730224499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="invoicing" />

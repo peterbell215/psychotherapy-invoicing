@@ -12,11 +12,31 @@ class Client < ApplicationRecord
   after_initialize { |client| client.session_charges.build(from: Time.zone.today, hourly_charge_rate: 60) }
 
   # @return Money
-  def default_session_charge
+  def current_rate
+    self.current_session_charge&.hourly_charge_rate
+  end
+
+  # Sets the current rate for sessions if different from current rate as held in database.  Updates the
+  # current rate in the database to be up to yesterday, and creates a new session_charges record starting
+  # today with an open ended charge period.
+  # @return [Money]
+  def current_rate=(rate)
+    active_session_charge = self.current_session_charge
+
+    if active_session_charge&.current_rate != rate
+      active_session_charge&.update!(to: Date.today - 1.day)
+      self.session_charges << SessionCharge.new(from: Date.today, to: nil, rate:)
+    end
+
+    rate
+  end
+
+  # Returns the current session_charge record.
+  def current_session_charge
     if self.id
-      self.session_charges.find_by(to: nil).hourly_charge_rate
+      self.session_charges.find_by(to: nil)
     else
-      self.session_charges.find { |session_charge| session_charge.to.nil? }.hourly_charge_rate
+      self.session_charges.find { |session_charge| session_charge.to.nil? }
     end
   end
 
