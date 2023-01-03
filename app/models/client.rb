@@ -13,7 +13,11 @@ class Client < ApplicationRecord
 
   # @return Money
   def default_session_charge
-    self.session_charges.find_by(to: nil).hourly_charge_rate
+    if self.id
+      self.session_charges.find_by(to: nil).hourly_charge_rate
+    else
+      self.session_charges.find { |session_charge| session_charge.to.nil? }.hourly_charge_rate
+    end
   end
 
   def session_charges_must_not_overlap

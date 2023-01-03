@@ -20,10 +20,20 @@ describe 'Client' do
   end
 
   describe '#default_session_charge' do
-    context 'when a new record is created with a nil value for hourly_charge' do
-      subject { FactoryBot.create :client }
+    context 'when a new record is built with a nil value for hourly_charge' do
+      subject { FactoryBot.build :client }
 
       it 'autofills the session_charge.' do
+        expect(subject.default_session_charge).to eq Money.new(6000)
+      end
+    end
+
+    context 'when a new record is created' do
+      subject { Client.find_by(name: 'Test Client') }
+
+      before(:context) { FactoryBot.create :client }
+
+      it 'creates a child record session_charge with a default value' do
         expect(subject.default_session_charge).to eq Money.new(6000)
       end
     end
