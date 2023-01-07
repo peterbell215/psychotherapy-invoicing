@@ -20,13 +20,41 @@ describe 'Client' do
       end
     end
 
-    context 'when a new record is created' do
-      subject(:test_client) { Client.find_by(name: 'Test Client') }
+    context 'when a new record is created with a nil value for hourly_charge' do
+      before { create(:client) }
 
-      before(:context) { create(:client) }
+      let(:read_back_client) { Client.find_by(name: 'Test Client') }
 
       it 'creates a child record session_charge with a default value' do
-        expect(test_client.current_rate).to eq Money.new(6000)
+        expect(read_back_client.current_rate).to eq Money.new(6000)
+      end
+    end
+  end
+
+  describe '#current_rate=' do
+    context 'when a new client record is built with current_rate set' do
+      subject(:test_client) { Client.new(current_rate: Money.new(7000)) }
+
+      it 'creates a corresponding session_charge child' do
+        expect(test_client.current_rate).to eq Money.new(7000)
+      end
+    end
+
+    context 'when a new client record is created with current_rate set' do
+      before { Client.create!(attributes_for(:client).merge(current_rate: Money.new(7000))) }
+
+      let(:read_back_client) { Client.find_by(name: 'Test Client') }
+
+      it 'creates a corresponding session_charge child' do
+        expect(read_back_client.current_rate).to eq Money.new(7000)
+      end
+    end
+
+    context 'when the same current_rate is set a 2nd time' do
+      subject(:test_client) { Client.create!(attributes_for(:client).merge(current_rate: Money.new(7000))) }
+
+      it 'does not do an update to the current session_charge record' do
+        expect(test_client.current_session_charge).not_to have_changed
       end
     end
   end

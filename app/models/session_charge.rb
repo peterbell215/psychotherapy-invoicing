@@ -11,6 +11,8 @@ class SessionCharge < ApplicationRecord
   # @param [ActiveResult] session_charges
   # @return [SessionCharge|false]
   def self.overlap?(session_charges)
+    return false if session_charges.length <= 1
+
     overlapping_pair = session_charges.each_cons(2).find { |previous, following| previous.to >= following.from }
     overlapping_pair&.first
   end
