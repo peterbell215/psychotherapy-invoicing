@@ -2,6 +2,6 @@
 
 class HomeController < ApplicationController
   def index
-    render inertia: 'home/index'
+    render inertia: 'Application'
   end
 end
